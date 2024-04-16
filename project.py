@@ -51,36 +51,14 @@ for line in f:
     elif data[0] == ("Norway"):
         Norway.append(int(valence))
 
-p = figure(width=800, height=800, title="Countries and Music Valence", x_range = (0, 11), y_range = (0, 100))
-One = [1] * 50
-Two = [2] * 50
-Three = [3] * 50
-Four = [4] * 50
-Five = [5] * 50
-Six = [6] * 50
-Seven = [7] * 50
-Eight = [8] * 50
-Nine = [9] * 50
-Ten = [10] * 50
+p = figure(width=800, height=800, title="Countries and Music Valence                                                                                         Blue = One Song, Red = Average", x_range = (0, 11), y_range = (0, 100))
 
 x = 1
 def average(con):
     avg = int(mean((con)))
     return avg
 
-AvFin = [average(Finland)]
-AvDen = [average(Denmark)]
-AvIce = [average(Iceland)]
-AvSwe = [average(Sweden)]
-AvIsr = [average(Israel)]
-AvNet = [average(Netherlands)]
-AvNor = [average(Norway)]
-AvLux = [average(Luxembourg)]
-AvSwi = [average(Switzerland)]
-AvAus = [average(Australia)]
-
 for country in CountryList:
-    print("test")
     xvar = [x]*50
     p.circle(xvar, country, size=10, color="navy", alpha=0.5)
     p.circle(x, average(country), size=10, color="red", alpha=1)
