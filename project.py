@@ -3,17 +3,29 @@ from statistics import mean
 from bokeh.plotting import figure, show
 
 f = open("songsHappy.csv", "r")
+CountryList = [
+[],
+[],
+[],
+[],
+[],
+[],
+[],
+[],
+[],
+[],
+]
 
-Finland = []
-Denmark = []
-Switzerland = []
-Iceland = []
-Netherlands = []
-Sweden = []
-Israel = []
-Luxembourg = []
-Australia = []
-Norway = []
+Finland = CountryList[0]
+Denmark = CountryList[1]
+Switzerland = CountryList[2]
+Iceland = CountryList[3]
+Netherlands = CountryList[4]
+Sweden = CountryList[5]
+Israel = CountryList[6]
+Luxembourg = CountryList[7]
+Australia = CountryList[8]
+Norway = CountryList[9]
 
 for line in f:
     data = line.split(",")
@@ -51,13 +63,14 @@ Eight = [8] * 50
 Nine = [9] * 50
 Ten = [10] * 50
 
-def average(country):
-    avg = int(mean((country)))
+x = 1
+def average(con):
+    avg = int(mean((con)))
     return avg
 
-AvFin = [average(Finland)] * 50
-AvDen = [average(Denmark)] * 50
-AvIce = [average(Iceland)] * 50
+AvFin = [average(Finland)]
+AvDen = [average(Denmark)]
+AvIce = [average(Iceland)]
 AvSwe = [average(Sweden)]
 AvIsr = [average(Israel)]
 AvNet = [average(Netherlands)]
@@ -66,30 +79,12 @@ AvLux = [average(Luxembourg)]
 AvSwi = [average(Switzerland)]
 AvAus = [average(Australia)]
 
-
-p.circle(One, Finland, size=10, color="navy", alpha=0.5)
-p.circle(Two, Denmark, size=10, color="navy", alpha=0.5)
-p.circle(Three, Iceland, size=10, color="navy", alpha=0.5)
-p.circle(Four, Sweden, size=10, color="navy", alpha=0.5)
-p.circle(Five, Israel, size=10, color="navy", alpha=0.5)
-p.circle(Six, Netherlands, size=10, color="navy", alpha=0.5)
-p.circle(Seven, Norway, size=10, color="navy", alpha=0.5)
-p.circle(Eight, Luxembourg, size=10, color="navy", alpha=0.5)
-p.circle(Nine, Switzerland, size=10, color="navy", alpha=0.5)
-p.circle(Ten, Australia, size=10, color="navy", alpha=0.5)
-# show the results
-
-
-p.circle(One, AvFin, size=10, color="red", alpha=1)
-p.circle(Two, AvDen, size=10, color="red", alpha=1)
-p.circle(Three, AvIce, size=10, color="red", alpha=1)
-p.circle(Four, AvSwe, size=10, color="red", alpha=1)
-p.circle(Five, AvIsr, size=10, color="red", alpha=1)
-p.circle(Six, AvNet, size=10, color="red", alpha=1)
-p.circle(Seven, AvNor, size=10, color="red", alpha=1)
-p.circle(Eight, AvLux, size=10, color="red", alpha=1)
-p.circle(Nine, AvSwi, size=10, color="red", alpha=1)
-p.circle(Ten, AvAus, size=10, color="red", alpha=1)
+for country in CountryList:
+    print("test")
+    xvar = [x]*50
+    p.circle(xvar, country, size=10, color="navy", alpha=0.5)
+    p.circle(x, average(country), size=10, color="red", alpha=1)
+    x += 1
 
 p.xaxis.axis_label = "Countries Ranking"
 p.yaxis.axis_label = "Valence Level"

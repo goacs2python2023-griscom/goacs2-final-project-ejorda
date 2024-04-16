@@ -1,47 +1,15 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-718a45dd9cf7e7f842a935f5ebbe5719a5e09af4491e668f4dbf3b35d5cca122.svg)](https://classroom.github.com/online_ide?assignment_repo_id=14687685&assignment_repo_type=AssignmentRepo)
-# FINAL PROJECT
+<h1> How does the music a country listens to relate to the nation's overall happiness? </h1>
 
-This repository is for all of the programs and files needed for your final project.
+The World Happiness Report conducts a yearly study that, on top of a plethora of other info, determines a ranking of happiness among the world's countries
 
-Include any program files or data files that are needed for your visualizations when submitting to this assignment.
+https://www.forbes.com/sites/laurabegleybloom/2024/03/19/ranked-the-20-happiest-countries-in-the-world-in-2024/?sh=6321c6d11b55
 
-If you are pulling data from an API, please put the data into a file in this repository.
+Spotify, a music streaming platform, meaures every song's individual statistics. One of these statistics is valence: a number from 0 - 100 describing the positivity from a song.
+A song with a higher valence would have greater tones of happiness and joy, while lower valence expresses negative feelings like sadness or anger.
 
-THANK YOU FOR A GREAT SEMESTER! :)
+Site used to build dataset: http://sortyourmusic.playlistmachinery.com/index.html
 
----
+More info about Spotify's song attributes/audio analysis : https://developer.spotify.com/documentation/web-api/reference/get-audio-analysis
 
-## SPECIAL INSTRUCTIONS FOR API USERS
-
-Add a file named `config.py` and store your API keys in variables within this file. `config.py` has already been added to the `.gitignore` file.
-
-Add an `import config` to the top of your programs in order to use the API key. This will prevent the API key from being published to the web. You can then use the API key in your file by accessing the variable inside the config module, for example `config.my_api_key`.
-
-
-When using the requests library, you might need to `pip install requests`. If your computer complains about permissions, try installing for the user using `python -m pip install -user requests` on Windows or `pip install --user requests` on Mac.
-
----
-
-### Tips
-- Start the project early!
-    - The earlier you start, the more time you have to get help if you run into any 
-    problems.
-- Test your code. 
-    - Find good stopping points to test out bits of code and
-    functions even when your program is only partially finished. 
-    - Try out different inputs and see if you expect the outputs that you get.
-- Ask for help on Twist. 
-    - Remember that we are traveling together on this 
-    learning journey and you don't have to struggle alone!
-    - It is way more important that you get your questions answered than it is
-    for you to have a perfectly working program
-- Try some [rubber duck debugging](https://rubberduckdebugging.com/).
-    - Find a rubber duck, or a pet rock, a stuffed animal, a figurine, a patient dog.
-    - Explain your program, line by line, to the victim of your choice.
-    - Sometimes this helps you think through your code and how it works, and 
-    can help you find bugs and errors in your code.
-- DO NOT COPY/PASTE CODE unless otherwise instructed to.
-    - The purpose of these exercises is for you to practice your programming skills.
-    - You will only harm yourself if you do not make the effort to understand the
-    programming concepts we are covering.
-    
+This program takes these two elements into account to create a visualization between a the top 10 countries in the World Happiness Report and their respective Spotify Top 50 Chart's 
+valence measurement.
